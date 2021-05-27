@@ -1,0 +1,26 @@
+section.logo-image-section {
+  height: 500px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  div.link-img-gallery-wrapper {
+    width: 75%;
+    
+    span {
+      display: flex;
+      justify-content: space-evenly;
+      padding-top: 50px;   
+      flex-wrap: wrap;
+      align-items: center;
+      .gallery-element {
+  
+        img {
+          width: 250px;
+        }
+      }
+    }
+  }
+}

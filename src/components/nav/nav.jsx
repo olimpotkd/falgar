@@ -1,20 +1,22 @@
 import React from 'react';
 import './nav.scss';
 
+import { Link } from 'react-router-dom';
+
 const Nav = () => {
   return (
     <nav> 
       <span className="wrapper">
         <span className="logo-container">
-          <a href="./index.html">
+          <Link to="/">
             <img src="/assets/falgar_borde.png" alt="FALGAR"/>
-          </a>
+          </Link>
         </span>
         <span className="links-container">
-            <a href="/products.html">Productos</a>
-            <a href="/services.html">Servicios</a>
-            <a href="/about.html">Quienes somos</a>
-            <a href="/contact.html">Contacto</a>
+            <Link to="/products">Productos</Link>
+            <Link to="/services">Servicios</Link>
+            <Link to="/about">Quienes somos</Link>
+            <Link to="/contact">Contacto</Link>
         </span>
       </span> 
       </nav>
