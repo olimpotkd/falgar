@@ -15,7 +15,7 @@ import Services from './pages/services.jsx';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Nav/>
 
       <Routes>
@@ -27,7 +27,7 @@ function App() {
       </Routes>
 
       <Footer/>
-    </div>
+    </>
   );
 }
 

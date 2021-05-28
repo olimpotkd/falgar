@@ -1,33 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import LogoImgStrip from '../components/logoImgStrip/logoImgStrip.jsx';
+import { db } from '../firebase';
 
 const Products = () => {
-  const [ brands, setBrands ] = useState([
-    {
-      "id": 1,
-      "brandName": "Fronius",
-      "url": "https://fronius.com",
-      "brandImage": "/assets/brands/fronius_logo.png"
-    },
-    {
-      "id": 2,
-      "brandName": "Cordova Safety",
-      "url": "https://cordovasafety.com",
-      "brandImage": "/assets/brands/cordova_safety.png"
-    },
-    {
-      "id": 3,
-      "brandName": "Postle Industries",
-      "url": "https://postle.com",
-      "brandImage": "/assets/brands/postle_industries.png"
-    }
-  ])
+  const [ brands, setBrands ] = useState([]);
 
+  useEffect(() => {
+    const brandsRef = db.collection('brands');
+
+    brandsRef.get()
+      .then(result => {
+        if (!result.empty) {
+          let dataArray = [];
+          result.forEach(doc =>  {
+            let document = doc.data();
+            document.id = doc.id;
+            dataArray.push(document)
+          });
+
+          setBrands(dataArray);
+        }
+      })
+  }, []);
+  
   return ( 
     <>
-    <h1>Products</h1>
-    <LogoImgStrip/>
-    
+      <h1>Products</h1>
+      <LogoImgStrip data={brands} customClass={"brands"}/>
     </>
    );
 }
