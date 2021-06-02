@@ -1,0 +1,29 @@
+.banner-image {
+  width: 100%;
+  height: 600px;
+  // background-image: linear-gradient(rgba(150,150,150,0.5), rgba(150, 150, 150, 0.5)), url("../assets/main-cover.jpg");
+  // background-image: linear-gradient(rgba(150,150,150,0), rgba(150, 150, 150, 0)), url("../assets/main-cover.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span.text-container {
+    // height: 
+    width: 100%;
+    background-color: rgba($color: #ffffff, $alpha: 0.8);
+    
+    h2 {
+      font-size: 4em;
+      font-family: Open;
+      &.center {
+        // padding: 0;
+        margin: 30px;
+        text-align: center;
+      }
+    }
+  }
+}

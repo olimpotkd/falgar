@@ -12,9 +12,9 @@ const LogoImgStrip = ({ data, customClass } ) => {
 
       for (let i = 0; i < data.length; i++) { 
         gallery.push(
-          <a key={data[i].id} href={data[i].url} className="brand-card gallery-element">
+          <a key={data[i].id} href={data[i].url} className="gallery-element">
                 <div>
-                  <img src={data[i].brandImage} alt=""/>
+                  <img src={data[i].imageSrc} alt=""/>
                 </div>
           </a>
         )
@@ -26,17 +26,13 @@ const LogoImgStrip = ({ data, customClass } ) => {
   const classes = `${customClass}-container link-img-gallery-wrapper`;
     
   return ( 
-    
-    <section className="logo-image-section">
+    <div className="logo-image-container">
         <div className={classes}>
-          <h3>Nuestras marcas</h3>
           <span>
-
             {galleryItems}
-            
           </span>
         </div>
-      </section>
+      </div>
    );
 }
  

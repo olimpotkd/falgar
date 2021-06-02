@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import LogoImgStrip from '../components/logoImgStrip/logoImgStrip.jsx';
+import './products.scss';
+
 import { db } from '../firebase';
 
 const Products = () => {
@@ -11,24 +13,40 @@ const Products = () => {
     brandsRef.get()
       .then(result => {
         if (!result.empty) {
-          let dataArray = [];
-          result.forEach(doc =>  {
-            let document = doc.data();
-            document.id = doc.id;
-            dataArray.push(document)
-          });
-
-          setBrands(dataArray);
+          setBrands(parseBrands(result));
         }
       })
   }, []);
+
+  const parseBrands = (result) => {
+    let parsedBrandsArray = [];
+
+    result.forEach(doc =>  {
+      let data = doc.data();
+
+      let parsedDoc = {
+        id: doc.id,
+        url: data.url,
+        imageSrc: data.brandImage
+      }
+
+      parsedBrandsArray.push(parsedDoc)
+    });
+
+    return parsedBrandsArray;
+  };
+
+
   
   return ( 
-    <>
-      <h1>Products</h1>
-      <LogoImgStrip data={brands} customClass={"brands"}/>
-    </>
-   );
+    <section className="products">
+          <h3>Somos representantes de las mejores marcas para aplicaciones y procesos de soldadura, 
+            como también equipos de protección y consumibles innovadores, de reconocimiento mundial</h3>
+          
+          <LogoImgStrip data={brands} customClass={"brands"}/>
+
+    </section>
+  );
 }
  
 export default Products;

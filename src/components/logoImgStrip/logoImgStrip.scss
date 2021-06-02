@@ -1,5 +1,6 @@
-section.logo-image-section {
-  height: 500px;
+div.logo-image-container {
+  // height: 500px;
+  min-height: 200px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -15,9 +16,9 @@ section.logo-image-section {
       padding-top: 50px;   
       flex-wrap: wrap;
       align-items: center;
+
       .gallery-element {
-  
-        img {
+          img {
           width: 250px;
         }
       }

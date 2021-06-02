@@ -7,5 +7,5 @@ ReactDOM.render(
   <Router>
     <App />
   </Router>,
-  document.getElementsByTagName('body')[0]
+  document.getElementById('app')
 );
