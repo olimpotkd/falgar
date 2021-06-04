@@ -3,9 +3,11 @@ div.logo-image-container {
   min-height: 200px;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding-top: 30px;
 
   div.link-img-gallery-wrapper {
     width: 75%;
@@ -13,7 +15,6 @@ div.logo-image-container {
     span {
       display: flex;
       justify-content: space-evenly;
-      padding-top: 50px;   
       flex-wrap: wrap;
       align-items: center;
 

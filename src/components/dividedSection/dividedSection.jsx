@@ -1,30 +1,19 @@
 import React from 'react';
 import './dividedSection.scss';
 
-const DividedSection = ({ image, invert, fullImage, children}) => {
-  if (invert) {
-    if (!fullImage) {
-    return ( 
-      <section className="divided-section">
-        <div className="media-container">
-          <img src={image} alt="" />
-        </div>
-        <div className="message-container">
-          {children}
-        </div>
-      </section>
-    )}
-  }
+const DividedSection = ({ leftSide, rightSide }) => {
   return ( 
     <section className="divided-section">
-      <div className="message-container">
-        {children}
-      </div>
-      <div className="media-container">
-        <img src={image} alt="" />
+      <div className="divided-section-wrapper">
+        <div className="left-container">
+          {leftSide}
+        </div>
+        <div className="right-container">
+          {rightSide}
+        </div>
       </div>
     </section>
-  );
+  )
 }
 
 export default DividedSection;

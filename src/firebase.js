@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import 'firebase/app-check';
 
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyBtP2xPn7ftjrqKD_KmaPzULUfhfpxNU00",
@@ -9,9 +10,12 @@ const firebaseApp = firebase.initializeApp({
   appId: "1:324008727736:web:771f3c5cc0fe807101d04d"
 })
 
-const db = firebaseApp.firestore();
-const storage = firebaseApp.storage();
+const appCheck = firebase.appCheck();
+appCheck.activate('6LftQBEbAAAAAJ9T3I5kNP_FLsoGyFiVRJitWHu8');
 
-export { db, storage };
+const db = firebaseApp.firestore();
+// const storage = firebaseApp.storage();
+
+export { db };
 
 

@@ -1,3 +1,25 @@
 .products {
   min-height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+  font-family: Open Sans, sans-serif;
+
+  .wrapper {
+    width: 70%;
+    
+    h2 {
+      font-size: 1.5em;
+      line-height: 3em;
+      text-align: center;
+    } 
+
+    article {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+  }
 }

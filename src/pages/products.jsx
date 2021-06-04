@@ -40,11 +40,28 @@ const Products = () => {
   
   return ( 
     <section className="products">
-          <h3>Somos representantes de las mejores marcas para aplicaciones y procesos de soldadura, 
-            como también equipos de protección y consumibles innovadores, de reconocimiento mundial</h3>
+      <div className="wrapper">
+          {/* <h2>Representamos las mejores marcas para aplicaciones y procesos de soldadura,  */}
+            {/* como también equipos de protección y consumibles innovadores, de reconocimiento mundial</h2> */}
           
-          <LogoImgStrip data={brands} customClass={"brands"}/>
+          <article>
+            <div>
+              <h2>Contamos con soluciones para:</h2>
+            </div>
+            <div>
+              <ul>
+                <li>Soldadura de revestimiento</li>
+                <li>Corte y Pulido</li>
+                <li>Tornillería</li>
+                <li>Herramientas</li>
+                <li>Seguridad Industrial</li>
+                <li>Salud Ocupacional</li>
+              </ul>
+            </div>
+          </article>
 
+          <LogoImgStrip headerText={"Representamos las marcas"} data={brands} customClass={"brands"}/>
+      </div>
     </section>
   );
 }

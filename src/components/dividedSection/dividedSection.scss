@@ -1,26 +1,31 @@
 section.divided-section {
   width: 100%;
-  height: 500px;
+  height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  .message-container {
-    width:50%;
+  .divided-section-wrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-  }
+    justify-content: space-between;
+    width:80%;
 
-  .media-container {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    img {
-      width: 100%;
+    .left-container{
+      width:50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .right-container {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
     }
   }
 }

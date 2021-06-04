@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './logoImgStrip.scss';
 
-const LogoImgStrip = ({ data, customClass } ) => {
+const LogoImgStrip = ({ data, customClass, headerText } ) => {
 
   const [ galleryItems, setGalleryItems ] = useState([]);
 
@@ -27,6 +27,7 @@ const LogoImgStrip = ({ data, customClass } ) => {
     
   return ( 
     <div className="logo-image-container">
+      <h2>{headerText}</h2>
         <div className={classes}>
           <span>
             {galleryItems}
