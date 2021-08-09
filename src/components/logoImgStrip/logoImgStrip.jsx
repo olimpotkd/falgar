@@ -23,7 +23,7 @@ const LogoImgStrip = ({ data, customClass, headerText } ) => {
     }
   }, [data]);
 
-  const classes = `${customClass}-container link-img-gallery-wrapper`;
+  const classes = `$ link-img-gallery-wrapper`;
     
   return ( 
     <div className="logo-image-container">

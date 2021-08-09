@@ -43,17 +43,16 @@ const About = () => {
   </article>;
 
 let rightide = 
-  <article>
-    
+  <article className="description-text-container">
     <h2>
           Falgar Welding Tech  es una empresa que surge con el propósito de suplir soluciones para diversos sectores industriales. 
           Tenemos las mejores alternativas para diversas aplicaciones y procesos de soldadura, con equipos y consumibles innovadores 
           de reconocimiento mundial
-        </h2>
+    </h2>
   </article>;
 
 return ( 
-  <section className="about divided">
+  <section className="about page-container">
     <div className="wrapper">
       <DividedSection leftSide={leftSide} rightSide={rightide}/>
       

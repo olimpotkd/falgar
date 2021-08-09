@@ -3,9 +3,11 @@ import './footer.scss';
 
 const Footer = () => {
   return ( 
-    <footer>
-      <p>Desarrollado por Carlos Reynoso</p>
-      <a href="mailto:carlos@carlosreynoso.com">carlos@carlosreynoso.com</a>
+    <footer className={"dark-background"}>
+      <div>
+        <p>Desarrollado por Carlos Reynoso</p>
+        <a href="mailto:carlos@carlosreynoso.com">carlos@carlosreynoso.com</a>
+      </div>
     </footer>
    );
 }

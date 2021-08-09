@@ -8,6 +8,8 @@ div.logo-image-container {
   align-items: center;
   width: 100%;
   padding-top: 30px;
+  // margin: 80px 0 20px 0;
+
 
   div.link-img-gallery-wrapper {
     width: 75%;
@@ -19,8 +21,13 @@ div.logo-image-container {
       align-items: center;
 
       .gallery-element {
+
           img {
-          width: 250px;
+          width: auto;
+          height: auto;
+          max-width: 250px;
+          max-height: 250px;
+          margin: 15px 10px;
         }
       }
     }

@@ -1,11 +1,20 @@
 section.about {
-  width: 100%;
-  min-height: 600px;
-  margin: 200px 0;
-  
   font-family: Open Sans, sans-serif;
+  background-color: rgb(236, 236, 236);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .description-text-container {
+    h2 {
+      line-height: 80px;
+    }
+  }
+
+  // .divided-section {
+  //   background-color: rgb(199, 199, 199);
+  //   padding: 100px 0;
+  // }
+
+  div.logo-image-container {
+    margin: 100px 0 20px 0;
+  }
 }
+
